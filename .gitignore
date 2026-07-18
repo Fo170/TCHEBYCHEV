@@ -4,6 +4,8 @@
 *.exe
 *.app
 Makefile
+Makefile.*
+.qmake.stash
 moc_*.cpp
 ui_*.h
 qrc_*.cpp
