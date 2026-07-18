@@ -15,7 +15,6 @@ TCHEBYCHEV/
   main.cpp          - Point d'entree QT
   mainwindow.h      - Interface graphique (header)
   mainwindow.cpp    - Interface graphique (implementation)
-  TCHEBYCHEV.pro    - Fichier de projet QT (qmake)
 
   Windows/
     TCHEBYCHEV.pro  - Configuration Windows (MSVC/MinGW)

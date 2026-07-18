@@ -17,6 +17,9 @@ release/
 .ui/
 *.rc
 
+# Root project file is unused (platform .pro files are in Windows/ and linux/)
+/TCHEBYCHEV.pro
+
 # IDE
 *.pro.user
 .vscode/
