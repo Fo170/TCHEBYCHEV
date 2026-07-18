@@ -1,0 +1,21 @@
+# Build
+*.o
+*.obj
+*.exe
+*.app
+Makefile
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
+debug/
+release/
+
+# IDE
+*.pro.user
+.vscode/
+.qt/
+
+# Temp
+*~
+*.swp
+TCHBYCHV.txt
