@@ -19,19 +19,16 @@ TCHEBYCHEV/
 
   Windows/
     TCHEBYCHEV.pro  - Configuration Windows (MSVC/MinGW)
+    TCHEBYCHEV.exe  - Binaire compilé (release)
 
   linux/
     TCHEBYCHEV.pro  - Configuration Linux (GCC)
-
-  plus_necessaire/
-    Old_includes/   - Anciens fichiers Win32/DOS (reference)
-    TCHEBYCHEV.cpp  - Ancienne version console
-    resource.h      - Ressources Win32
-    TCHEBYCHEV.rc   - Script ressources Win32
-    *.ico           - Icônes Win32
 ```
 
 ## Build Instructions
+
+**Important :** Compilez toujours depuis le sous-dossier correspondant à votre plateforme.
+Les artéfacts de compilation restent dans ce sous-dossier, la racine reste propre.
 
 ### Linux
 ```bash
@@ -52,12 +49,6 @@ mingw32-make
 cd Windows
 qmake TCHEBYCHEV.pro
 nmake
-```
-
-### From root directory (cross-platform)
-```bash
-qmake TCHEBYCHEV.pro
-make          # or nmake / mingw32-make
 ```
 
 ## Dependencies

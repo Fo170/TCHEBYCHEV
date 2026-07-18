@@ -16,7 +16,11 @@ HEADERS += \
     ../TCHBYCHV.h \
     ../mainwindow.h
 
-RC_ICONS = ../icon.ico
+DESTDIR     = .
+OBJECTS_DIR = .obj
+MOC_DIR     = .moc
+RCC_DIR     = .rcc
+UI_DIR      = .ui
 
 win32-msvc* {
     QMAKE_CXXFLAGS += /fp:precise

@@ -15,6 +15,12 @@ HEADERS += \
     ../TCHBYCHV.h \
     ../mainwindow.h
 
+DESTDIR     = .
+OBJECTS_DIR = .obj
+MOC_DIR     = .moc
+RCC_DIR     = .rcc
+UI_DIR      = .ui
+
 # Enable long double math and optimizations
 QMAKE_CXXFLAGS += -mfpmath=387 -ffloat-store -O2
 LIBS += -lm

@@ -11,6 +11,11 @@ ui_*.h
 qrc_*.cpp
 debug/
 release/
+.moc/
+.obj/
+.rcc/
+.ui/
+*.rc
 
 # IDE
 *.pro.user
