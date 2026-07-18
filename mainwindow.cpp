@@ -8,6 +8,7 @@
 #include <QHeaderView>
 #include <QFile>
 #include <QTextStream>
+#include <QRegularExpression>
 #include <cmath>
 
 MainWindow::MainWindow(QWidget *parent)
@@ -67,7 +68,7 @@ void MainWindow::buildUI()
         while (!in.atEnd()) {
             QString line = in.readLine().trimmed();
             if (line.isEmpty() || line.startsWith('#')) continue;
-            QStringList parts = line.split(QRegExp("[\\s,;]+"));
+            QStringList parts = line.split(QRegularExpression("[\\s,;]+"));
             if (parts.size() >= 2) {
                 int r = m_pointsTable->rowCount();
                 m_pointsTable->insertRow(r);
