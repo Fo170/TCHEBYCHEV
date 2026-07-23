@@ -1,19 +1,28 @@
 # Linux-specific build configuration
 # Use GCC with long double support
 
-QT       += core gui widgets charts
+QT       += core gui widgets charts network
 CONFIG   += c++17
 TARGET    = TCHEBYCHEV
 TEMPLATE  = app
 
 SOURCES += \
     ../main.cpp \
-    ../mainwindow.cpp
+    ../mainwindow.cpp \
+    ../UpdateChecker.cpp \
+    ../LangueManager.cpp \
+    ../Project.cpp
 
 HEADERS += \
     ../Types.h \
     ../TCHBYCHV.h \
-    ../mainwindow.h
+    ../mainwindow.h \
+    ../AppConfig.hpp \
+    ../UpdateChecker.hpp \
+    ../LangueManager.hpp \
+    ../Project.hpp
+
+RESOURCES += ../resources.qrc
 
 DESTDIR     = .
 OBJECTS_DIR = .obj

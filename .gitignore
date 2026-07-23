@@ -15,7 +15,9 @@ release/
 .obj/
 .rcc/
 .ui/
-*.rc
+
+# Keep our custom rc file (not auto-generated)
+# *.rc
 
 # Root project file is unused (platform .pro files are in Windows/ and linux/)
 /TCHEBYCHEV.pro

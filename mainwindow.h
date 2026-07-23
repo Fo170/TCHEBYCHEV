@@ -6,11 +6,20 @@
 #include <QTableWidget>
 #include <QComboBox>
 #include <QLabel>
+#include <QMenu>
+#include <QMenuBar>
+#include <QAction>
+#include <QActionGroup>
+#include <QStatusBar>
 #include <QtCharts/QChartView>
 #include <QtCharts/QLineSeries>
 #include <QtCharts/QScatterSeries>
 #include <QtCharts/QValueAxis>
 #include "TCHBYCHV.h"
+
+class UpdateChecker;
+class LangueManager;
+class Project;
 
 class MainWindow : public QMainWindow
 {
@@ -20,6 +29,9 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+protected:
+    void closeEvent(QCloseEvent *event) override;
+
 private slots:
     void onCompute();
     void onExportText();
@@ -28,12 +40,21 @@ private slots:
     void onZoomIn();
     void onZoomOut();
     void onResetView();
+    void showAbout();
+    void checkUpdate();
+    void loadProject();
+    void saveProject();
+    void changerLangue(const QString& code);
 
 private:
     void buildUI();
+    void createMenus();
+    void retranslateUi();
     void computeChebyshev();
     void updateChart();
     void autoRange();
+    void saveSettings();
+    void loadSettings();
     Ldbl functionFT(int p, Ldbl t1);
 
     // Input
@@ -62,4 +83,20 @@ private:
 
     int m_np;
     Ldbl m_xminVal, m_xmaxVal;
+
+    // Feature: Menu actions
+    QMenu *m_menuFichier, *m_menuEdition, *m_menuAffichage;
+    QMenu *m_menuLangue, *m_menuAide;
+    QAction *m_aAbout, *m_aCheckUpdate;
+    QAction *m_aLoadProject, *m_aSaveProject, *m_aExport;
+    QAction *m_aQuit, *m_aClear, *m_aZoomIn, *m_aZoomOut, *m_aAutoRange;
+
+    // Feature: Update checker
+    UpdateChecker *m_updateChecker;
+
+    // Feature: Language
+    LangueManager *m_langue;
+
+    // Feature: Project
+    Project *m_project;
 };
