@@ -31,3 +31,6 @@ release/
 *~
 *.swp
 TCHBYCHV.txt
+
+# AGENTS.md (environnement local, pas pour le dépôt)
+AGENTS.md
