@@ -141,5 +141,4 @@ make
 
 ## Auteur
 
-Projet original : Olivier Fournet
-Port QT : 2026
+Projet original : Olivier FOURNET
